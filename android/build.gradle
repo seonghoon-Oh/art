@@ -1,7 +1,7 @@
 buildscript {
   repositories {
     google()
-    jcenter()
+    mavenCentral()
   }
 
   dependencies {
@@ -31,7 +31,6 @@ android {
 
 repositories {
   google()
-  jcenter()
   mavenCentral()
 }
 
@@ -39,10 +38,10 @@ allprojects {
     repositories {
         mavenLocal()
         google()
-        jcenter()
         maven {
             url "$rootDir/../node_modules/react-native/android"
         }
+        gradlePluginPortal()
     }
 }
 
